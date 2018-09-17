@@ -16,13 +16,14 @@ extern void right(int,int);
 int main()
 {
 	int goin;
-	
-	//int error;
+	ROBOT_CASE robot_position;
+
 	SetSVGA64k();
-	
+	robot_position.x = 100;
+	robot_position.y = 100;
 	//input_box(700,600);
 	
-	
+	/*
 	
 	
 	goin = enterpage();
@@ -32,44 +33,17 @@ int main()
 	}
 	else
 	{
+		delay0(10000);
 		goin = enterpage();
 	}
-	/*
-	moveaim(100,100);
-	getch();*/
-	//backbodyhead(500,200);
-
-
-
-	//Putbmp64k(0,0,"c:\\cph\\robot\\garden.bmp");
-	//forebodyhead(100,100);
-    //right(500,200);
-	//left(500,600);
-	/*showHanZiBySize(100,100,"��",0,0,3);
-	showHanZiBySize(600,100,"��",0,0,3);
-	init();
 	
-	while(1)
-	{
-		/*if(NULL==(mousesave=(unsigned int*)malloc(160*sizeof(unsigned int))))        //为鼠标背景分配储存空�?
-	    {
-		    printf("there is no place") ;
-		    exit(1);
-	    }  
-		else
-		{
-			if(init()==0)                                            //初始化鼠�?
-	        {
-		        printf("the mouse driver absense");
-		        delay(5000);
-		        exit(1);
-	        }*/
-
-		/*movemouse(&x,&y,&button);
-		if(x==1)
-		{
-			exit(0);
-		}
-	}	*/
-	return 0;
+	*/
+	
+	
+	
+	
+    //forebodyhead(robot_position);
+	movedown(&robot_position);
+	moveright(&robot_position);
+	getch();
 }
