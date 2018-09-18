@@ -7,10 +7,10 @@
 #include "move.h"
 #include"svgahead.h"
 #include"basicgf.h"
-#include"zuhe.h"
+#include"compo.h"
 #include<conio.h>
 #include"advancegf.h"
-#include"flame.h"
+#include"frame.h"
 #include"hanzi.h"
 #include"module_box.h"
 
