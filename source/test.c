@@ -1,19 +1,8 @@
 #include"main.h"
-#include<stdio.h>
 
-#include"svgahead.h"
-#include<conio.h>
-#include"advancegf.h"
-#include"hanzi.h"
-#include"flame.h"
-#include"module_box.h"
 
-extern void forebodyhead(int x,int y);
-extern void backbodyhead(int x,int y);
-extern void left(int,int);
-extern void right(int,int);
 
-int main()
+void main()
 {
 	int goin;
 	ROBOT_CASE robot_position;

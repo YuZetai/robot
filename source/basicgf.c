@@ -266,15 +266,13 @@ void bar(int x0, int y0, int x1, int y1, int color)
 		}
 }
 
-void delay()
-{
-	int i,count;
-	while(count<100)
-	{
-		for(i=0;i<100;i++)
-		{
-			
-		}
-		count++;
+void delay0(int x)
+ {
+ 	int i,j,k;
+ 	for(i=0;i<x;i++)
+ 	{
+		for (j = 0; j < 1100; j++)
+			for(k=0;k<100;k++);
+		
 	}
-}
+ } 

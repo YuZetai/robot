@@ -11,7 +11,7 @@
 #include<conio.h>
 #include"advancegf.h"
 #include"frame.h"
-#include"hanzi.h"
+#include"hzxc.h"
 #include"module_box.h"
 
 #endif

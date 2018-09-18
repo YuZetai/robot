@@ -75,5 +75,5 @@ extern void bar(int x0, int y0, int x1, int y1, int color);
 extern void FillCircle(int x, int y, int r, int color);
 
 
-extern void delay();
+extern void delay0(int x);
 #endif

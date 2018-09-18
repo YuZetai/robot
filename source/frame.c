@@ -1,12 +1,4 @@
-#include<stdio.h>
-#include"basicgf.h"
-#include"advancegf.h"
-#include"frame.h"
-#include"hzxs.h"
-#include"mouse.h"
-#include"module_box.h"
-#include<svgahead.h>
-#include"inputme.h"
+#include"main.h"
 void enter_page();
 int enterpage();
 void load_page()
