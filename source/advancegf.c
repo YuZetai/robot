@@ -1,7 +1,8 @@
 #include<basicgf.h>
 #include<svgahead.h>
 #include<math.h>
-
+#define PI 3.1415926
+/*
 void bow(int,int,int,int);
 void semicircle_up(int,int,int,int);
 void semicircle_down(int,int,int,int);
@@ -17,6 +18,9 @@ void bow_right_up(int,int,int,int);
 void bow_right_down(int,int,int,int);
 void bow_left_up(int,int,int,int);
 void bow_left_down(int,int,int,int);
+void lean_line(int,int,int,int,int);
+void theta_bar(int x,int y,int length,int wide,int theta,int color);
+void robot_hand(int,int,int);*/
 
 /*只能画竖直方向的实心椭圆
 输入：两个圆心坐标及半径，颜色*/
@@ -354,4 +358,71 @@ void bar_round_with_shadow(int x,int y,int length,int height,int r,int thick,int
 	bow_left_up(x-length/2+r,y-height/2+r,r,65535);
 	bow_left_down(x-length/2+r,y+height/2-r,r,65535);
 	bow_right_down(x+length/2-r,y+height/2-r,r,0);
+}
+
+void lean_line(int x,int y,int length,int theta,int color)//x,y为线段的起点
+{
+	double right_x,right_y;
+	double i,y0;
+	double theta0 = ((double)(theta))/180*PI;
+	right_x= x+cos(theta0)*(length);
+	right_y= y-sin(theta0)*(length);
+    y0 = y;
+	if((int)(theta)<=90)
+	{
+		for(i=x;i<=right_x;i++)
+	    {
+		    Putpixel64k(i,y0,color);
+		    y0 += tan(theta0);
+	    }
+	}
+	else
+	{
+		for(i=x;i>=right_x;i--)
+	    {
+		    Putpixel64k(i,y0,color);
+		    y0 = y0+tan(theta0);
+	    }
+	}
+
+}
+
+void lean_line_thick(int x,int y,int length,int theta,int thick,int color)//x,y 为矩形的左边左上角坐标
+{
+	int i;
+	for(i=0;i<thick;i++)
+	{
+		lean_line(x+i,y,length,theta,color);
+	}
+}
+
+/*
+void theta_bar(int x,int y,int length,int wide,int theta,int color)//只满足下半边，Θ为跟x正方向夹角，x,y为矩形上边中心坐标，角度大于0
+{
+    double down_x,down_y,y0,i=(double)(x),theta_rect0;
+	int theta_rect=90+theta;
+	double theta0 = ((double)(theta))/180*PI;
+	down_x = x+cos(theta0)*(wide/2);
+	down_y = y+sin(theta0)*(wide/2);
+	y0 = (double)(y);
+	theta_rect0 = (double)(theta_rect);
+	for(i;i<=down_x;i++)
+	{
+		lean_line((int)(i),(int)(y0),length,theta_rect,color);
+		//i = (double)(i);
+		y0 = y0+tan(theta_rect0);
+	}
+}*/
+
+void theta_bar(int x,int y,int length,int height,int theta,int color)//x,y为矩形左上角,height为线长
+{
+	lean_line_thick(x,y,height,theta,length,color);
+}
+
+void robot_hand(int x,int y,int theta)
+{
+    theta_bar(x,y-30,(int)(12/sin((double)(theta)/180*PI)),(int)(16/sin((double)(theta)/180*PI)),theta,0);
+	theta_bar(x,y-30,(int)(10/sin((double)(theta)/180*PI)),(int)(14/sin((double)(theta)/180*PI)),theta,255);
+	FillCircle(x+(int)(16/tan((double)(theta)/180*PI))+8,y-(int)(24*sin((double)(theta)/180*PI)),7,0);
+    FillCircle(x+(int)(16/tan((double)(theta)/180*PI))+8,y-(int)(24*sin((double)(theta)/180*PI)),6,65535);
 }

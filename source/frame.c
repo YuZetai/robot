@@ -1,9 +1,10 @@
 #include"main.h"
-void enter_page();
-int enterpage();
+
 void load_page()
 {
-	   bar(0,0,1024,768,64049);
+	   bar(0,0,1024,768,1503);
+	   FillCircle(200,150,80,34429);
+	   FillCircle(700,300,200,34431);
        bar_round_with_shadow(500,200,200,30,5,1,65535);
        bar_round_with_shadow(500,300,200,30,5,1,65535);
 	   fdhz(320,200,1,1,"ÕË",0);
@@ -22,8 +23,8 @@ void load_page()
 
 void zhuce_page()
 {
-	bar(0,0,1024,768,64049);
-	fdhz(350,80,2,3,"×¢",0);
+	bar(0,0,1024,768,1503);
+	fdhz(370,80,2,3,"×¢",0);
 	fdhz(600,80,2,3,"²á",0);
 	bar_round_with_shadow(500,200,200,30,5,1,65535);
     bar_round_with_shadow(500,300,200,30,5,1,65535);

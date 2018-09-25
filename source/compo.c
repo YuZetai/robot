@@ -85,6 +85,7 @@ void left(ROBOT_CASE robot_position)//x-23~x+20,y-80~y-9
 	fill_bow_right_down(robot_position.x-16,robot_position.y-44,20,65535);
 	bar(robot_position.x-15,robot_position.y-15+robot_position.leg_right,robot_position.x+15,robot_position.y-9+robot_position.leg_right,0);
 	bar(robot_position.x-14,robot_position.y-14+robot_position.leg_right,robot_position.x+14,robot_position.y-10+robot_position.leg_right,65535);
+
 }
 
 void right(ROBOT_CASE robot_position)//x-20~x+26,y-80~y-5
@@ -105,4 +106,5 @@ void right(ROBOT_CASE robot_position)//x-20~x+26,y-80~y-5
 	bar(robot_position.x-14,robot_position.y-14+robot_position.leg_left,robot_position.x+10,robot_position.y-6+robot_position.leg_left,65535);
 	fill_bow_left_down(robot_position.x+16,robot_position.y-44,20,65535);
 	bar(robot_position.x-16,robot_position.y-44,robot_position.x+18,robot_position.y-40,63488);
+	robot_hand(robot_position.x-15,robot_position.y-13,45+robot_position.hand_right);
 }
