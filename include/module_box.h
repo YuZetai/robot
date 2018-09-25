@@ -7,4 +7,6 @@ extern void input_box(int x,int y);
 
 extern void phone_module(int x,int y);
 
+extern void phone_back(int x,int y);
+
 #endif
