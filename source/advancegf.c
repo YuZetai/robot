@@ -2,7 +2,7 @@
 #include<svgahead.h>
 #include<math.h>
 #define PI 3.1415926
-/*
+
 void bow(int,int,int,int);
 void semicircle_up(int,int,int,int);
 void semicircle_down(int,int,int,int);
@@ -20,7 +20,7 @@ void bow_left_up(int,int,int,int);
 void bow_left_down(int,int,int,int);
 void lean_line(int,int,int,int,int);
 void theta_bar(int x,int y,int length,int wide,int theta,int color);
-void robot_hand(int,int,int);*/
+void robot_hand(int,int,int);
 
 /*只能画竖直方向的实心椭圆
 输入：两个圆心坐标及半径，颜色*/

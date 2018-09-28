@@ -2,7 +2,7 @@
 #include<svgahead.h>
 #include"basicgf.h"
 #include"hzxs.h"
-void error_box(int x,int y)
+void overflow_box(int x,int y)
 {
 
 	bar(x-350,y-100,x+350,y-70,255);
@@ -15,6 +15,26 @@ void error_box(int x,int y)
 	fdhz(x-30,y+10,2,2,"存",0);
 	fdhz(x+15,y+10,2,2,"溢",0);
 	fdhz(x+60,y+10,2,2,"出",0);
+	//fdhz(x+30,y+10,2,2,"!",0);
+	fdhz(x-25,y+53,2,2,"确",0);
+	fdhz(x+25,y+53,2,2,"定",0);
+}
+
+void null_box(int x,int y)
+{
+	bar(x-350,y-100,x+350,y-70,255);
+	bar(x-350,y-70,x+350,y+100,46651);
+	bar_round(x+335,y-85,28,28,2,1,63488);
+	bar_round(x+12,y+70,100,40,10,2,31694);
+	lean_line_thick(x+325,y-95,25,45,5,65535);
+	lean_line_thick(x+325,y-78,25,-45,5,65535);
+	fdhz(x-115,y+10,2,2,"找",0);
+	fdhz(x-75,y+10,2,2,"不",0);
+	fdhz(x-30,y+10,2,2,"到",0);
+	fdhz(x+15,y+10,2,2,"该",0);
+	fdhz(x+60,y+10,2,2,"路",0);
+	fdhz(x+100,y+10,2,2,"径",0);
+	
 	//fdhz(x+30,y+10,2,2,"!",0);
 	fdhz(x-25,y+53,2,2,"确",0);
 	fdhz(x+25,y+53,2,2,"定",0);

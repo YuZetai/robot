@@ -4,23 +4,25 @@
 
 void main()
 {
-	/*
 
-	ROBOT_CASE robot_position;
 
-	SetSVGA64k();
-	robot_position.x = 1000;
-	robot_position.y = 100;
-	moveleft(&robot_position);
-	
-	*/
 	
 	//input_box(700,600);
 	
-	/*
-	int goin;
+	
+	int goin=0,finish=0;
 	SetSVGA64k();
-	goin = enterpage();
+	while(goin!=1)
+	{
+		goin = enterpage();
+	}
+    while(finish!=1)
+    {
+		finish = mainpage();
+	}
+	getch();
+
+	/*
     if(goin==0)
 	{
 		printf("good!");
@@ -56,15 +58,7 @@ void main()
 			break;
 	}
 	*/
-	
-    //forebodyhead(robot_position);
-	//movedown(&robot_position);
-	//moveright(&robot_position);
-	ROBOT_CASE robot_position;
-	robot_position.x = 100;
-	robot_position.y = 100;
-    SetSVGA64k();
-    moveright(&robot_position);
-
+    //moveright(&robot_position);
+    
 	getch();
 }

@@ -3,7 +3,7 @@
 
 
 #include<stdio.h>
-#include "mouse.h"
+#include "nmouse.h"
 #include "move.h"
 #include"svgahead.h"
 #include"basicgf.h"
@@ -13,5 +13,12 @@
 #include"frame.h"
 #include"hzxs.h"
 #include"module_box.h"
+#include<string.h>
+#include<bios.h>
+#include"input.h"
+
+
+
+
 
 #endif
